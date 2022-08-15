@@ -71,7 +71,7 @@ function showCurrentWeather(response) {
     ];
     let day = days[dayIndex];
   
-    return `${day} ${hours}:${minutes}`;
+    return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
   }
   
   function search(event) {
@@ -91,7 +91,7 @@ function showCurrentWeather(response) {
   function convertToCelsius(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
-   //  let currentTemperature = (temperatureElement)
+    let currentTemperature = (temperatureElement)
     temperatureElement.innerHTML = 19;
   }
   
@@ -111,5 +111,3 @@ function showCurrentWeather(response) {
   let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", convertToCelsius);
   
-  let iconElement = document.querySelector("icon");
-  iconElement.setAttribute("src", 'http://openweathermap.org/img/wn/10d@2x.png');
