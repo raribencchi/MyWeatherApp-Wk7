@@ -1,4 +1,5 @@
 function showCurrentWeather(response) {
+  console.log(response.data);
     document.querySelector("#city").innerHTML = response.data.name;
     document.querySelector("#temperature").innerHTML = Math.round(
       response.data.main.temp
@@ -9,7 +10,9 @@ function showCurrentWeather(response) {
       "Wind:" + Math.round(response.data.wind.speed) + " Km/h";
     document.querySelector("#description").innerHTML =
       response.data.weather[0].main;
-    //document.querySelector("#precipitation").innerHTML = "Precipitation" + response.data.main.precipitation + "%";
+//To make weather icon change by itself as per the city searched
+      iconElement.setAttribute("src", 'http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png');
+ 
   }
   
   function searchCity(city) {
@@ -110,4 +113,7 @@ function showCurrentWeather(response) {
   
   let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", convertToCelsius);
+
+  let iconElement = document.querySelector("#icon");
   
+
