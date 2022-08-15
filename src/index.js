@@ -71,7 +71,7 @@ function showCurrentWeather(response) {
     ];
     let day = days[dayIndex];
   
-    return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
+    return `${day} ${hours}:${minutes}`;
   }
   
   function search(event) {
