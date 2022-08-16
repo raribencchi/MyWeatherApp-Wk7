@@ -89,16 +89,17 @@ iconElement.setAttribute(
   
   function convertToFahrenheit(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
+    let temperatureElement = document.querySelector("#temperature").innerHTML;
     let fahrenheitTemperature = (temperatureElement*9)/5+32;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+    document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
   }
-  
+
   function convertToCelsius(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    let currentTemperature = (temperatureElement)
+    let temperatureElement = document.querySelector("#temperature").innerHTML;
+    let currentCelsius = (temperatureElement)
     temperatureElement.innerHTML = 19;
+    document.querySelector("#temperature").innerHTML = Math.round(ce);
   }
   
 
