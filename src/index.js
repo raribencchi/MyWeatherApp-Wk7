@@ -80,44 +80,44 @@ celsiusTemperature = response.data.main.temp;
     return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
   }
   
-  function search(event) {
-    event.preventDefault();
-    let cityElement = document.querySelector("#city");
-    let cityInput = document.querySelector("#city-input");
-    cityElement.innerHTML = cityInput.value;
-  }
+     
+  let celsiusTemperature = null;
   
-  function convertToFahrenheit(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature").innerHTML;
-    let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
-    document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
-  }
-
-  function convertToCelsius(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature").innerHTML;
-      temperatureElement.innerHTML = Math.round(celsiusTemperature);
-   
-  }
-  
-let celsiusTemperature = null;
-
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
   dateElement.innerHTML = formatDate(currentTime);
   
+   let iconElement = document.querySelector("#icon");
+   
 
-  let searchForm = document.querySelector("#search-form");
-  searchForm.addEventListener("submit", search);
+   let fahrenheitLink = document.querySelector("#fahrenheit-link");
+   fahrenheitLink.addEventListener("click", convertToFahrenheit);
+        
+     function convertToFahrenheit(event) {
+       event.preventDefault();
+       let temperatureElement = document.querySelector("#temperature").innerHTML;
+       let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
+       document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
+     }
+   
+     let celsiusLink = document.querySelector("#celsius-link");
+     celsiusLink.addEventListener("click", convertToCelsius);
+   
+     function convertToCelsius(event) {
+       event.preventDefault();
+       let temperatureElement = document.querySelector("#temperature").innerHTML;
+         temperatureElement.innerHTML = Math.round(celsiusTemperature);
+      
+     }
   
-
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", convertToFahrenheit);
-  
-  let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", convertToCelsius);
-
-  let iconElement = document.querySelector("#icon");
-  
+  //function search(event) {
+    //event.preventDefault();
+    //let cityElement = document.querySelector("#city");
+    //let cityInput = document.querySelector("#city-input");
+    //cityElement.innerHTML = cityInput.value;
+  //}
+    
+  //let searchForm = document.querySelector("#search-form");
+  //searchForm.addEventListener("submit", search);
+    
 
