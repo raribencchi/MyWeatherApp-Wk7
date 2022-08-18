@@ -1,12 +1,13 @@
 body {
     font-family: arial, sans-serif;
     margin-top: 30px;
+    background: lightskyblue;
    
   }
   
   
   h1 {
-    color: #7c7c7c;
+    color: #10e922;
     font-size: 24px;
     font-weight: 100;
     line-height: 0, auto;
@@ -22,7 +23,7 @@ body {
   }
   
   li {
-    color: #7c7c7c;
+    color:whitesmoke;
     font-size: 16px;
     font-weight: 100;
     height: 19px;
@@ -32,14 +33,20 @@ body {
 
   }
   
-  
+.card {
+  border-radius: 15px;
+
+}
+
   .weather-app {
-    border: 1px solid #655eca;
-    padding: 20px auto;
+     padding: 20px auto;
     margin: 30px, auto;
-    border-radius: 10px;
-    max-width: 700px;
-    Top: -20px;
+    border-radius: 15px;
+    max-width: 800px;
+    max-height: 1000px;
+    Top: -40px;
+    bottom: -80px;
+    background-color:black;
     
   }
   
@@ -47,18 +54,21 @@ body {
     height: 80px;
     width: 80px;
     margin-right: 10px;
+    caret-color: auto;
   }
   
   .temperature {
-    color: rgb(33, 33, 33);
+    color: rgb(221, 194, 194);
     font-size: 64px;
     font-weight: 400;
     line-height: 1;
+
   }
   
   .units {
     position: relative;
     top: -34px;
+    color: #5ebdca;
   }
   
   .search-form {
@@ -66,6 +76,7 @@ body {
     box-shadow: #7c7c7c;
     margin-top: 20px;
     margin-left: 10px;
+    
     
   }
 

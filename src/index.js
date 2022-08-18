@@ -14,7 +14,7 @@ iconElement.setAttribute(
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 );
 
-celsiusTemperature = response.data.main.temp;
+ celsiusTemperature = response.data.main.temp;
  
   }
   
@@ -81,15 +81,16 @@ celsiusTemperature = response.data.main.temp;
   }
   function convertToFahrenheit(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature").innerHTML;
+    let temperatureElement = document.querySelector("#temperature");
     let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
     document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
   }
 
   function convertToCelsius(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature").innerHTML;
-      temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    let temperatureElement = document.querySelector("#temperature");
+    //let fahrenheitToCel = (fahrenheitTemperature - 32) * 5 / 9;
+      document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
    
   }
   
