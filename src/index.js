@@ -79,13 +79,6 @@ celsiusTemperature = response.data.main.temp;
   
     return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
   }
-  
-  
-  
-  
-  
-  
-  
   function convertToFahrenheit(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature").innerHTML;
