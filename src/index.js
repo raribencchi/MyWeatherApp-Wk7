@@ -1,30 +1,3 @@
-
-     
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", convertToFahrenheit);
-       
-    function convertToFahrenheit(event) {
-      event.preventDefault();
-      let temperatureElement = document.querySelector("#temperature").innerHTML;
-      let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
-      document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
-    }
-  
-    let celsiusTemperature = null;
-  
-    celsiusTemperature = response.data.main.temp;
-    
-    
-    let celsiusLink = document.querySelector("#celsius-link");
-    celsiusLink.addEventListener("click", convertToCelsius);
-  
-    function convertToCelsius(event) {
-      event.preventDefault();
-      let temperatureElement = document.querySelector("#temperature").innerHTML;
-        temperatureElement.innerHTML = Math.round(celsiusTemperature);
-     
-    }
-
 function showCurrentWeather(response) {
   console.log(response.data);
     document.querySelector("#city").innerHTML = response.data.name;
@@ -41,7 +14,8 @@ iconElement.setAttribute(
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 );
 
-
+celsiusTemperature = response.data.main.temp;
+ 
   }
   
   function searchCity(city) {
@@ -106,16 +80,39 @@ iconElement.setAttribute(
     return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
   }
   
-
-
   
+  
+  
+  
+  
+  
+  function convertToFahrenheit(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature").innerHTML;
+    let fahrenheitTemperature = (celsiusTemperature*9)/5+32;
+    document.querySelector("#temperature").innerHTML = Math.round(fahrenheitTemperature);
+  }
+
+  function convertToCelsius(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature").innerHTML;
+      temperatureElement.innerHTML = Math.round(celsiusTemperature);
+   
+  }
+  
+let celsiusTemperature = null;
+
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();
   dateElement.innerHTML = formatDate(currentTime);
   
-   let iconElement = document.querySelector("#icon");
+  let fahrenheitLink = document.querySelector("#fahrenheit-link");
+  fahrenheitLink.addEventListener("click", convertToFahrenheit);
+  
+  let celsiusLink = document.querySelector("#celsius-link");
+  celsiusLink.addEventListener("click", convertToCelsius);
 
-
+  let iconElement = document.querySelector("#icon");
   
   //function search(event) {
     //event.preventDefault();
