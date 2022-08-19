@@ -7,7 +7,7 @@ body {
   
   
   h1 {
-    color: #10e922;
+    color: #10bee9;
     font-size: 24px;
     font-weight: 100;
     line-height: 0, auto;
@@ -35,6 +35,9 @@ body {
   
 .card {
   border-radius: 15px;
+  max-width: 800px;
+ 
+ 
 
 }
 
@@ -43,10 +46,11 @@ body {
     margin: 30px, auto;
     border-radius: 15px;
     max-width: 800px;
-    max-height: 1000px;
+    
     Top: -40px;
     bottom: -80px;
     background-color:black;
+
     
   }
   
@@ -76,16 +80,13 @@ body {
     box-shadow: #7c7c7c;
     margin-top: 20px;
     margin-left: 10px;
-    
-    
+       
   }
 
   .blockquote {
-
     display: block;
     text-align: center;
-
-  }
+    }
 
   
  
