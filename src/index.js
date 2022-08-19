@@ -1,6 +1,7 @@
 function showCurrentWeather(response) {
   console.log(response.data);
     document.querySelector("#city").innerHTML = response.data.name;
+    celsiusTemperature = response.data.main.temp;
     document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
     document.querySelector("#humidity").innerHTML =
       "Humidity:" + response.data.main.humidity + "%";
@@ -14,7 +15,7 @@ iconElement.setAttribute(
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
 );
 
- celsiusTemperature = response.data.main.temp;
+
  
   }
   
@@ -87,6 +88,7 @@ iconElement.setAttribute(
   }
 
   function convertToCelsius(event) {
+    console.log(celsiusTemperature);
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
     //let fahrenheitToCel = (fahrenheitTemperature - 32) * 5 / 9;
