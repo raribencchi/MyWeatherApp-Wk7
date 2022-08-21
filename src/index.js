@@ -2,6 +2,9 @@ function showCurrentWeather(response) {
   console.log(response.data);
     document.querySelector("#city").innerHTML = response.data.name;
     celsiusTemperature = response.data.main.temp;
+    temp_min = response.main.temp_min;
+    temp_max = response.main.temp_max;
+    document.querySelector("#tempMinMax").innerHTML = Math.round(temp_min + "/" + temp_max);
     document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
     document.querySelector("#humidity").innerHTML =
       "Humidity:" + response.data.main.humidity + "%";
@@ -77,6 +80,8 @@ iconElement.setAttribute(
       "Saturday"
     ];
     let day = days[dayIndex];
+    let tomorrow = days[1];
+    console.log(tomorrow);
   
     return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
   }
@@ -97,6 +102,8 @@ iconElement.setAttribute(
   }
   
 let celsiusTemperature = null;
+let temp_min= null;
+let temp_max = null;
 
   let dateElement = document.querySelector("#date");
   let currentTime = new Date();

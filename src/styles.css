@@ -42,16 +42,14 @@ body {
 }
 
   .weather-app {
-     padding: 20px auto;
+    padding: 20px auto;
     margin: 30px, auto;
     border-radius: 15px;
     max-width: 800px;
-    
     Top: -40px;
     bottom: -80px;
     background-color:black;
-
-    
+  
   }
   
   .weather-icon {
@@ -78,8 +76,9 @@ body {
   .search-form {
     border-color:#655eca;
     box-shadow: #7c7c7c;
-    margin-top: 20px;
+    margin-top: -20px;
     margin-left: 10px;
+    
        
   }
 
