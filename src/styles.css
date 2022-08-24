@@ -1,3 +1,10 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
     font-family: arial, sans-serif;
     margin-top: 30px;
@@ -32,6 +39,17 @@ body {
     margin-left: 5px;
 
   }
+
+
+    .list-group-item {
+    text-align: justify;
+     padding: 55px;
+      margin: 10px -5px 10px 5px ;
+      background-color: whitesmoke;
+      color: black;
+        }
+
+  
   
 .card {
   border-radius: 15px;
@@ -42,7 +60,7 @@ body {
 }
 
   .weather-app {
-    padding: 20px auto;
+    padding: 30px auto;
     margin: 30px, auto;
     border-radius: 15px;
     max-width: 800px;

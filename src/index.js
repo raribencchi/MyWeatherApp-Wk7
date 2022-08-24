@@ -80,8 +80,7 @@ iconElement.setAttribute(
       "Saturday"
     ];
     let day = days[dayIndex];
-    let tomorrow = days[1];
-    console.log(tomorrow);
+   
   
     return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
   }
