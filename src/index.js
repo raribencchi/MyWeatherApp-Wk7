@@ -12,6 +12,9 @@ function showCurrentWeather(response) {
       "Wind:" + Math.round(response.data.wind.speed) + " Km/h";
     document.querySelector("#description").innerHTML =
       response.data.weather[0].main;
+      currentweatherItems=document.querySelector("current-weather-items");
+      weattherForecastEl=document.querySelector("weather-forecast");
+      currentTempEl= document.querySelector("current-temp");
 //To make weather icon change by itself as per the city searched
 iconElement.setAttribute(
   "src",
@@ -68,8 +71,9 @@ iconElement.setAttribute(
     if (minutes < 10) {
       minutes = `0${minutes}`;
     }
-  
-    let dayIndex = date.getDay();
+      let dayIndex = date.getDay();
+
+
     let days = [
       "Sunday",
       "Monday",
@@ -80,10 +84,29 @@ iconElement.setAttribute(
       "Saturday"
     ];
     let day = days[dayIndex];
-   
-  
+ 
     return 'Last Updated:'+' '+`${day} ${hours}:${minutes}`;
+
   }
+
+
+  let months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
+  ];
+
+let month = months[monthIndex];
+
   function convertToFahrenheit(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");

@@ -7,7 +7,7 @@
 
 body {
    font-family: 'Poppins', sans-serif;
-   margin-top: 40px;
+   margin-top: 50px;
    background: url(https://pbs.twimg.com/media/DQ4ebGYU8AAl4FA.jpg:large);
    background-repeat: no-repeat;
    background-size: cover;
@@ -17,7 +17,7 @@ body {
   }
   
   .container {
-    padding: auto;
+    padding: 0 auto;
     color: azure;
      
   }
@@ -88,33 +88,52 @@ body {
     margin-top: -20px;
     margin-left: 10px;
     
-       
   }
 
   .blockquote {
-    display: block;
-    text-align: center;
+    display: flex;
+    color: black;
+    font-size: 18px;
+
     }
 
-  
-    .future-forecast {
-      background:rgba(24,24,27,0.8) ;
-      padding: 25px;
-      position: fixed;
-      bottom: 0;
-      display: flex;
-      color: white;
-      width: 100%;
-      align-items: center;
-      justify-content: center;
+    .weatherForecast {
+      display:flex
     }
- 
- 
- .future-forecast.weatherForecast {
-  display: flex;
-
+   
+    .weatherForecast.tempMax {
+    font-size: 18px;
+    padding-top: 15px;
  }
-  
+ 
+  .weatherForecast .weatherforecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+
+   }
+ 
+   .weatherForecast .weatherforecast-item .day {
+padding: 5px 15px;
+background: #3c3c44;
+border-radius: 50px;
+text-align: center;
+   }
+
+   .weatherForecast .weatherforecast-item .tempMin {
+    font-weight: 100;
+   }
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
