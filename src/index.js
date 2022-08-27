@@ -28,7 +28,7 @@ iconElement.setAttribute(
 
  
   function searchCity(city) {
-    let apiKey = "d0de55a8e4c2656420820e444434c9c3";
+    let apiKey = "df457e28d9eed75c8562d2731f606462";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showCurrentWeather);
   }
@@ -74,12 +74,6 @@ iconElement.setAttribute(
       minutes = `0${minutes}`;
     }
      
-      let months = ['Jan','Feb','Mar','Apr','May','Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-      let d = new Date();
-      let month = months[d.getMonth()];
-      console.log(d+month);
-
-
       let dayIndex = date.getDay();
 
     let days = [
@@ -143,3 +137,7 @@ let temp_max = null;
   //searchForm.addEventListener("submit", search);
     
 
+  let months = ['Jan','Feb','Mar','Apr','May','Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+  let d = new Date();
+  let month = months[d.getMonth()];
+  console.log(d+month);
