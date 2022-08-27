@@ -113,17 +113,13 @@ body {
       background: #3c3c44;
     }
 
-
-    
-
-
     .weatherForecast {
       display:flex
     }
    
     .weatherForecast .tempMinMax {
     font-size: 18px;
-    padding-top: 15px;
+    padding-top: 20px;
     background: #3c3c44;
     border-radius: 50px;
     text-align: center;
