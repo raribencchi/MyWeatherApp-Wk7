@@ -12,11 +12,11 @@ function showCurrentWeather(response) {
       "Wind:" + Math.round(response.data.wind.speed) + " Km/h";
     document.querySelector("#description").innerHTML =
       response.data.weather[0].main;
-      
+    
+    
       //for future weatherForecast
-      document.querySelector("tempMin").innerHTML =  temp_min;
-      document.querySelector("tempMax").innerHTML =  temp_max;
-      document.querySelector("day").innerHTML = day;
+    
+     document.querySelector("#Date").innerHTML = d + month;
 
 //To make weather icon change by itself as per the city searched
 iconElement.setAttribute(
@@ -26,10 +26,9 @@ iconElement.setAttribute(
  
   }
 
-  
-  
+ 
   function searchCity(city) {
-    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiKey = "d0de55a8e4c2656420820e444434c9c3";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showCurrentWeather);
   }
@@ -74,9 +73,14 @@ iconElement.setAttribute(
     if (minutes < 10) {
       minutes = `0${minutes}`;
     }
+     
+      let months = ['Jan','Feb','Mar','Apr','May','Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+      let d = new Date();
+      let month = months[d.getMonth()];
+      console.log(d+month);
+
+
       let dayIndex = date.getDay();
-      
-         
 
     let days = [
       "Sunday",
@@ -88,7 +92,7 @@ iconElement.setAttribute(
       "Saturday"
     ];
     let day = days[dayIndex];
-
+    
   
  
     return 'Last Updated:'+' '+`${day} ${hours}:${minutes}` ;

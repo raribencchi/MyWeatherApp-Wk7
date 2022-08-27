@@ -17,11 +17,34 @@ body {
   }
   
   .container {
-    padding: 0 auto;
+    padding: 0;
     color: azure;
      
   }
   
+  .card-150 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    }
+
+    .weather-app {
+      padding: 30px auto;
+      margin: 30px, auto;
+      border-radius: 10px;
+      background: #3c3c44;
+      border: 1px solid #eee;
+      max-width: 800px;
+      Top: -40px;
+      bottom: -80px;
+      
+    }
+      
   h1 {
     color: #10bee9;
     font-size: 24px;
@@ -50,18 +73,7 @@ body {
   }
 
 
-   .weather-app {
-    padding: 30px auto;
-    margin: 30px, auto;
-    border-radius: 15px;
-    max-width: 800px;
-    Top: -40px;
-    bottom: -80px;
-    background-color:black;
-  
-  }
-  
-  .weather-icon {
+ .weather-icon {
     height: 80px;
     width: 80px;
     margin-right: 10px;
@@ -69,7 +81,7 @@ body {
   }
   
   .temperature {
-    color: rgb(221, 194, 194);
+    color: #eee;
     font-size: 64px;
     font-weight: 400;
     line-height: 1;
@@ -92,42 +104,53 @@ body {
 
   .blockquote {
     display: flex;
-    color: black;
     font-size: 18px;
-
+    
     }
+
+    cite {
+      color: white;
+      background: #3c3c44;
+    }
+
+
+    
+
 
     .weatherForecast {
       display:flex
     }
    
-    .weatherForecast.tempMax {
+    .weatherForecast .tempMinMax {
     font-size: 18px;
     padding-top: 15px;
- }
+    background: #3c3c44;
+    border-radius: 50px;
+    text-align: center;
+  
+    }
  
   .weatherForecast .weatherforecast-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
+    margin: 0 5px;
     border: 1px solid #eee;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
 
-   }
+    }
  
-   .weatherForecast .weatherforecast-item .day {
-padding: 5px 15px;
-background: #3c3c44;
-border-radius: 50px;
-text-align: center;
-   }
+  .weatherForecast .weatherforecast-item .Date {
+  padding: 5px 15px;
+  background: #3c3c44;
+  border-radius: 50px;
+  text-align: center;
 
-   .weatherForecast .weatherforecast-item .tempMin {
-    font-weight: 100;
-   }
+   }  
+  
+  
  
  
  
