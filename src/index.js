@@ -100,8 +100,8 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 // Feature #2
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+//let searchForm = document.querySelector("#search-form");
+//searchForm.addEventListener("submit", search);
 
 // Bonus Feature
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
@@ -112,11 +112,31 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 //future weather forecast
 
-
 function showfutureweather(response) {
   temp_min = response.data.main.temp_min;
   temp_max = response.data.main.temp_max;
   document.querySelector("#tempMinMax").innerHTML = temp_min + "/" + temp_max;
   }
 
-   let tempMinMax = null;
+let tempMinMax = null;
+
+//To print day, month and date
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
+let day = days[dayIndex];
+let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+let d = new Date();
+let month = months[d.getMonth()];
+
+document.getElementById("Date").innerHTML = day + Month + d.getDate();
+
+
