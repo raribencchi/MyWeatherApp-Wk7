@@ -119,5 +119,4 @@ function showfutureweather(response) {
   document.querySelector("#tempMinMax").innerHTML = temp_min + "/" + temp_max;
   }
 
- 
-  let tempMinMax = null;
+   let tempMinMax = null;
