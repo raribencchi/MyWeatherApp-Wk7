@@ -12,152 +12,217 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
-        <title>MyWeatherApp-wk7</title>
+    <title>MyWeatherApp-wk7</title>
   </head>
   <body>
-    <form>
     <div class="container">
-       <div class="card-120">
-      <div class="weather-app">
-       
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-8">
-              <input
-                type="search"
-                placeholder="Type a city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
-            </div>
+      <div class="card-120">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="search"
+                  placeholder="Type a city.."
+                  autofocus="on"
+                  autocomplete="off"
+                  id="city-input"
+                  class="form-control shadow-sm"
+                />
+              </div>
 
-            <div class="col-4">
-              <button id="search" type="submit" class="btn btn-primary">
-                Search
-              </button>
-            
-              <button id ="currentcity" type="button" class="btn btn-success">
-                Current City
-              </button>
+              <div class="col-4">
+                <button id="search" type="submit" class="btn btn-primary">
+                  Search
+                </button>
+
+                <button id="currentcity" type="button" class="btn btn-success">
+                  Current City
+                </button>
+              </div>
+            </div>
+          </form>
+          <h1 id="city">Sydney NSW, Australia</h1>
+          <ul>
+            <li id="date">Last Updated:</li>
+            <li id="description">Partly Cloudy</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="http://openweathermap.org/img/wn/10d@2x.png"
+                  alt="Cloudy icon"
+                  class="weather-icon float-left"
+                  id="icon"
+                />
+                <div class="float-left">
+                  <span class="temperature" id="temperature">14</span>
+                  <span class="units">
+                    <a href="#" id="celsius-link">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul id="OtherInfo">
+                <li id="precipitation">Precipitation: 0%</li>
+                <li id="humidity">Humidity: 77%</li>
+                <li id="wind">Wind: 8 km/h</li>
+              </ul>
             </div>
           </div>
-        </form>
-        <h1 id="city">
-          Sydney NSW, Australia
-        </h1>
-        <ul>
-          <li id="date">Last Updated:</li>
-          <li id="description">
-            Partly Cloudy
-          </li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="clearfix">
-              <img
-               src="http://openweathermap.org/img/wn/10d@2x.png"
-                alt="Cloudy icon"
-                class="weather-icon float-left"
-                id="icon"
-              />
-              <div class="float-left">
-                <span class="temperature" id="temperature">14</span>
-                <span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a>
-                </span>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="weatherForecast" id="weatherForecast">
+                <div class="weatherforecast-item">
+                  <div class="Date">
+                    Sun
+                    <p>Aug 29</p>
+                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="WeatherIcon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <div id="tempMinMax">
+                    Min/Max
+                    <p>10&#176;/25&#176;</p>
+                  </div>
+                </div>
+
+                <div class="weatherforecast-item">
+                  <div class="Date">
+                    Mon
+                    <p>Aug 30</p>
+                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="WeatherIcon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <div id="tempMinMax">
+                    Min/Max
+                    <p>10&#176;/25&#176;</p>
+                  </div>
+                </div>
+
+                <div class="weatherforecast-item">
+                  <div class="Date">
+                    Tue
+                    <p>Aug 31</p>
+                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="WeatherIcon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <div id="tempMinMax">
+                    Min/Max
+                    <p>10&#176;/25&#176;</p>
+                  </div>
+                </div>
+
+                <div class="weatherforecast-item">
+                  <div class="Date">
+                    Wed
+                    <p>Sep 01</p>
+                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="WeatherIcon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <div id="tempMinMax">
+                    Min/Max
+                    <p>10&#176;/25&#176;</p>
+                  </div>
+                </div>
+
+                <div class="weatherforecast-item">
+                  <div class="Date">
+                    Thu
+                    <p>Sep 02</p>
+                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="WeatherIcon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <div id="tempMinMax">
+                    Min/Max
+                    <p>10&#176;/25&#176;</p>
+                  </div>
+                </div>
+
+                <div class="weatherforecast-item">
+                  <div class="Date">
+                    Fri
+                    <p>Sep 03</p>
+                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="WeatherIcon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <div id="tempMinMax">
+                    Min/Max
+                    <p>10&#176;/25&#176;</p>
+                  </div>
+                </div>
+
+                <div class="weatherforecast-item">
+                  <div class="Date">
+                    Sat
+                    <p>Sep 04</p>
+                  </div>
+                  <img
+                    src="http://openweathermap.org/img/wn/10d@2x.png"
+                    alt="WeatherIcon"
+                    class="icon"
+                    id="icon"
+                  />
+                  <div id="tempMinMax">
+                    Min/Max
+                    <p>10&#176;/25&#176;</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-6">
-            <ul id="OtherInfo">
-              <li id="precipitation">
-                Precipitation: 0%
-              </li>
-              <li id="humidity">
-                Humidity: 77%
-              </li>
-              <li id="wind">
-                Wind: 8 km/h
-              </li>
-            </ul>
-            </div>
-    </div>
-</div>
-<div class="container" >
-  <div class="row">
-    <div class="col-6">
-      <div class="weatherForecast" id="weatherForecast">
-
-        <div class="weatherforecast-item">
-          <div class="Date">Sun <p>Aug 29 </p></div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="WeatherIcon" class="icon" id="icon">
-          <div id="tempMinMax">Min/Max <p>10&#176;/25&#176;</p></div>
-        
         </div>
-
-        <div class="weatherforecast-item">
-          <div class="Date">Mon <p>Aug 30</p></div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="WeatherIcon" class="icon" id="icon">
-          <div id="tempMinMax">Min/Max <p>10&#176;/25&#176;</p></div>
-        
-        </div>
-
-        <div class="weatherforecast-item">
-          <div class="Date">Tue <p>Aug 31</p></div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="WeatherIcon" class="icon" id="icon">
-          <div id="tempMinMax">Min/Max <p>10&#176;/25&#176;</p></div>
-        </div>
-        
-        <div class="weatherforecast-item">
-          <div class="Date">Wed <p>Sep 01 </p></div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="WeatherIcon" class="icon" id="icon">
-          <div id="tempMinMax">Min/Max <p>10&#176;/25&#176;</p></div>
-          
-        </div>
-
-        <div class="weatherforecast-item">
-          <div class="Date">Thu <p>Sep 02</p> </div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="WeatherIcon" class="icon" id="icon">
-          <div id="tempMinMax">Min/Max <p>10&#176;/25&#176;</p></div>
-          
-        </div>
-
-        <div class="weatherforecast-item">
-          <div class="Date">Fri <p>Sep 03</p> </div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="WeatherIcon" class="icon" id="icon" >
-          <div id="tempMinMax">Min/Max <p>10&#176;/25&#176;</p></div>
-          
-        </div>
-
-        <div class="weatherforecast-item">
-          <div class="Date">Sat <P>Sep 04</P> </div>
-          <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="WeatherIcon" class="icon" id="icon">
-          <div id="tempMinMax">Min/Max <p>10&#176;/25&#176;</p></div>
-        </div>
-      </form>
-
       </div>
-    </div>
-  </div>
-</div>
 
-</div>
-
-    <div>
-      <div id="mycode">
-        <div class="card-body">
+      <div>
+        <div id="mycode">
+          <div class="card-body">
             <blockquote class="blockquote">
-          <p><Strong><a href="https://github.com/raribencchi/Wk6_Homework.git" class="mycode-link">OpenSourceCode </a></Strong></p>
-            <footer class="blockquote-footer"> <cite title="OwnerofthePage"> By Rashmi Aribenchi</cite></footer></blockquote>
-          </blockquote>
+              <p>
+                <strong
+                  ><a
+                    href="https://github.com/raribencchi/Wk6_Homework.git"
+                    class="mycode-link"
+                    >OpenSourceCode
+                  </a></strong
+                >
+              </p>
+              <footer class="blockquote-footer">
+                <cite title="OwnerofthePage"> By Rashmi Aribenchi</cite>
+              </footer>
+            </blockquote>
+          </div>
         </div>
       </div>
-     </div>
-  </div>
-</div>
+    </div>
 
     <script src="src/index.js"></script>
   </body>

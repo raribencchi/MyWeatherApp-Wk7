@@ -120,23 +120,4 @@ function showfutureweather(response) {
 
 let tempMinMax = null;
 
-//To print day, month and date
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday"
-];
-
-let day = days[dayIndex];
-let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-
-let d = new Date();
-let month = months[d.getMonth()];
-
-document.getElementById("Date").innerHTML = day + Month + d.getDate();
-
 
