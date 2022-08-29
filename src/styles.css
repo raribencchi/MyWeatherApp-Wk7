@@ -19,25 +19,23 @@ body {
   .container {
     padding: 0;
     color: azure;
-     
-  }
-  
-  .card-150 {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin: 0 5px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    padding: 10px;
-    }
+        
+  }
+
+    
+
+    .weatherForecast {
+      display: flex;
+      align-items: justufy;
+      justify-items: center;
+      }
 
     .weather-app {
       padding: 30px auto;
       margin: 30px, auto;
       border-radius: 10px;
-      background: #3c3c44;
+      background-color: #3c3c44;
       border: 1px solid #eee;
       max-width: 800px;
       Top: -40px;
@@ -97,16 +95,9 @@ body {
   .search-form {
     border-color:#655eca;
     box-shadow: #7c7c7c;
-    margin-top: -20px;
     margin-left: 10px;
     
   }
-
-  .blockquote {
-    display: flex;
-    font-size: 18px;
-    
-    }
 
     cite {
       color: white;
@@ -115,7 +106,14 @@ body {
 
     .weatherForecast {
       display:flex
+      
     }
+
+    .weatherforecast-item {
+      display: flex;
+      justify-items: center;
+    }
+
    
     .weatherForecast .tempMinMax {
     font-size: 18px;
