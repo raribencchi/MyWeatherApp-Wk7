@@ -9,7 +9,8 @@ function showCurrentWeather(response) {
     "Wind:" + Math.round(response.data.wind.speed) + " Km/h";
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  //document.querySelector("#precipitation").innerHTML = "Precipitation" + response.data.main.precipitation + "%";
+    let iconElement = document.querySelector ("icon");
+  
 }
 
 function searchCity(city) {
@@ -44,6 +45,8 @@ function displayPosition(position) {
   let apiKey = "e9161f5165c9dd60305601ec8b452226";
   let apiUrl = `${apiEndPoint}?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
   console.log(apiUrl);
+
+  iconElement.setAttribute("src", 'http://openweathermap.org/img/wn/${reponse.data.weather[0].icon}@2x.png');
 
   axios.get(apiUrl).then(showCurrentWeather);
 }
