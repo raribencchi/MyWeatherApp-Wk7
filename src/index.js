@@ -9,8 +9,8 @@ function showCurrentWeather(response) {
     "Wind:" + Math.round(response.data.wind.speed) + " Km/h";
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-    let iconElement = document.querySelector ("icon");
-  
+    document.querySelector("#icon").innerHTML = response.data.weather[0].icon;
+ 
 }
 
 function searchCity(city) {
@@ -46,7 +46,7 @@ function displayPosition(position) {
   let apiUrl = `${apiEndPoint}?lat=${latitude}&lon=${longitude}&units=${units}&appid=${apiKey}`;
   console.log(apiUrl);
 
-  iconElement.setAttribute("src", 'http://openweathermap.org/img/wn/${reponse.data.weather[0].icon}@2x.png');
+ iconElement.setAttribute("src", "http://openweathermap.org/img/wn/${reponse.data.weather[0].icon}@2x.png");
 
   axios.get(apiUrl).then(showCurrentWeather);
 }
