@@ -122,5 +122,6 @@ function showfutureweather(response) {
   }
 
 let tempMinMax = null;
+let iconElement = null;
 
 
